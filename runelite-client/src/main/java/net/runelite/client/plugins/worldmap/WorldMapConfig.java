@@ -99,10 +99,21 @@ public interface WorldMapConfig extends Config
 	}
 
 	@ConfigItem(
+		keyName = WorldMapPlugin.CONFIG_KEY_BOAT_TOOLTIP,
+		name = "Show boat destination in tooltip",
+		description = "Display the destination of the boat in the icon tooltip",
+		position = 7
+	)
+	default boolean boatTooltip()
+	{
+		return true;
+	}
+
+	@ConfigItem(
 		keyName = WorldMapPlugin.CONFIG_KEY_ANCIENT_TELEPORT_ICON,
 		name = "Show Ancient Magicks destinations",
 		description = "Show icons at the destinations for teleports in the Ancient Spellbook",
-		position = 7
+		position = 8
 	)
 	default boolean ancientTeleportIcon()
 	{
@@ -113,7 +124,7 @@ public interface WorldMapConfig extends Config
 		keyName = WorldMapPlugin.CONFIG_KEY_LUNAR_TELEPORT_ICON,
 		name = "Show Lunar Spellbook destinations",
 		description = "Show icons at the destinations for teleports in the Lunar Spellbook",
-		position = 8
+		position = 9
 	)
 	default boolean lunarTeleportIcon()
 	{
@@ -124,7 +135,7 @@ public interface WorldMapConfig extends Config
 		keyName = WorldMapPlugin.CONFIG_KEY_ARCEUUS_TELEPORT_ICON,
 		name = "Show Arceuus Spellbook destinations",
 		description = "Show icons at the destinations for teleports in the Arceuus Spellbook",
-		position = 9
+		position = 10
 	)
 	default boolean arceuusTeleportIcon()
 	{
@@ -135,7 +146,7 @@ public interface WorldMapConfig extends Config
 		keyName = WorldMapPlugin.CONFIG_KEY_JEWELLERY_TELEPORT_ICON,
 		name = "Show jewellery teleport locations",
 		description = "Show icons at the destinations for teleports from jewellery",
-		position = 10
+		position = 11
 	)
 	default boolean jewelleryTeleportIcon()
 	{
@@ -146,7 +157,7 @@ public interface WorldMapConfig extends Config
 		keyName = WorldMapPlugin.CONFIG_KEY_SCROLL_TELEPORT_ICON,
 		name = "Show teleport scroll locations",
 		description = "Show icons at the destinations for teleports from scrolls",
-		position = 11
+		position = 12
 	)
 	default boolean scrollTeleportIcon()
 	{
@@ -157,7 +168,7 @@ public interface WorldMapConfig extends Config
 		keyName = WorldMapPlugin.CONFIG_KEY_MISC_TELEPORT_ICON,
 		name = "Show misc teleport locations",
 		description = "Show icons at the destinations for miscellaneous teleport items",
-		position = 12
+		position = 13
 	)
 	default boolean miscellaneousTeleportIcon()
 	{
@@ -168,7 +179,7 @@ public interface WorldMapConfig extends Config
 		keyName = WorldMapPlugin.CONFIG_KEY_QUEST_START_TOOLTIPS,
 		name = "Show quest names",
 		description = "Indicates the names of quests and highlights incomplete ones",
-		position = 13
+		position = 14
 	)
 	default boolean questStartTooltips()
 	{
@@ -179,7 +190,7 @@ public interface WorldMapConfig extends Config
 		keyName = WorldMapPlugin.CONFIG_KEY_FARMING_PATCH_TOOLTIPS,
 		name = "Show farming patch type",
 		description = "Display the type of farming patches in the icon tooltip",
-		position = 14
+		position = 15
 	)
 	default boolean farmingPatchTooltips()
 	{
@@ -190,7 +201,7 @@ public interface WorldMapConfig extends Config
 		keyName = WorldMapPlugin.CONFIG_KEY_RARE_TREE_TOOLTIPS,
 		name = "Show rare tree type",
 		description = "Display the type of rare tree in the icon tooltip",
-		position = 15
+		position = 16
 	)
 	default boolean rareTreeTooltips()
 	{
@@ -201,7 +212,7 @@ public interface WorldMapConfig extends Config
 		keyName = WorldMapPlugin.CONFIG_KEY_RARE_TREE_LEVEL_ICON,
 		name = "Indicate unavailable trees",
 		description = "Indicate rare trees you do not have the level to cut on the icon",
-		position = 16
+		position = 17
 	)
 	default boolean rareTreeLevelIcon()
 	{

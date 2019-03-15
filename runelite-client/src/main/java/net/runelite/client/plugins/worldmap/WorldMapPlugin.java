@@ -67,6 +67,7 @@ public class WorldMapPlugin extends Plugin
 	static final String CONFIG_KEY_MISC_TELEPORT_ICON = "miscellaneousTeleportIcon";
 	static final String CONFIG_KEY_QUEST_START_TOOLTIPS = "questStartTooltips";
 	static final String CONFIG_KEY_MINIGAME_TOOLTIP = "minigameTooltip";
+	static final String CONFIG_KEY_BOAT_TOOLTIP = "boatTooltip";
 	static final String CONFIG_KEY_FARMING_PATCH_TOOLTIPS = "farmingpatchTooltips";
 	static final String CONFIG_KEY_RARE_TREE_TOOLTIPS = "rareTreeTooltips";
 	static final String CONFIG_KEY_RARE_TREE_LEVEL_ICON = "rareTreeIcon";
@@ -215,6 +216,14 @@ public class WorldMapPlugin extends Plugin
 			Arrays.stream(MinigameLocation.values())
 				.map(value -> new MinigamePoint(value, BLANK_ICON))
 				.forEach(worldMapPointManager::add);
+		}
+
+		worldMapPointManager.removeIf(BoatPoint.class::isInstance);
+		if (config.boatTooltip())
+		{
+			Arrays.stream(BoatLocation.values())
+					.map(value -> new BoatPoint(value, BLANK_ICON))
+					.forEach(worldMapPointManager::add);
 		}
 
 		worldMapPointManager.removeIf(QuestStartPoint.class::isInstance);
